@@ -368,9 +368,21 @@ namespace gigglebot {
         DS_set_vcsel_pulse_period(DS_VcselPeriodFinalRange, 14)
     }
 
-    //% blockId="DS_read_range_single" block="Distance sensor distance (mm)"
+    //% blockId="DS_Start_Continuous" block="Start distance sensor continuous measurements"
     //% subcategory=Sensors
-    export function DS_read_range_single(): number {
+    export function DS_Start_Continuous() {
+        DS_start_continuous(0) // set to back-to-back measurements
+    }
+
+    //% blockId="DS_Read_Range_Continuous" block="Distance sensor distance (mm) in continuous mode"
+    //% subcategory=Sensors
+    export function DS_Read_Range_Continuous(): number {
+        return DS_read_range_continuous_millimeters()
+    }
+
+    //% blockId="DS_Read_Range_Single" block="Distance sensor distance (mm)"
+    //% subcategory=Sensors
+    export function DS_Read_Range_Single(): number {
         return DS_read_range_single_millimeters()
     }
 
