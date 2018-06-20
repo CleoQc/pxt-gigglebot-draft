@@ -103,8 +103,29 @@ enum EyeAction {
     Close
 }
 
-enum I2C_Sensors {
-    I2C_DISTANCE_SENSOR = 0x2A
+enum GigglePixels {
+    Right,
+    Left,
+    SmileOne,
+    SmileTwo,
+    SmileThree,
+    SmileFour,
+    SmileFive,
+    SmileSix,
+    SmileSeven
+}
+
+enum ServoAction {
+    //% block="right"
+    Right,
+    //% block="left"
+    Left,
+    //% block="both in synchro"
+    Both,
+    //% block="both in mirror"
+    Mirror
+}
+
 enum DS_Constants {
     SYSRANGE_START = 0x00,
 
@@ -190,29 +211,6 @@ enum DS_Constants {
 
     ADDRESS_DEFAULT = 0x29,
     ADDRESS_TARGET = 0x2A
-}
-
-enum GigglePixels {
-    Right,
-    Left,
-    SmileOne,
-    SmileTwo,
-    SmileThree,
-    SmileFour,
-    SmileFive,
-    SmileSix,
-    SmileSeven
-}
-
-enum ServoAction {
-    //% block="right"
-    Right,
-    //% block="left"
-    Left,
-    //% block="both in synchro"
-    Both,
-    //% block="both in mirror"
-    Mirror
 }
 
 /**
